@@ -3,10 +3,10 @@ entries:
   v8s:
   - apiVersion: v2
     appVersion: v0.0.3
-    created: "2023-06-01T17:10:14.982261+03:00"
+    created: "2023-06-02T14:15:20.315845+03:00"
     description: kubernetes controller for vince - The Cloud Native Web Analytics
       Platform.
-    digest: 9249acb4c364c875302ddf5e9bb937207d681419f6479f4e35c2b2dd42005545
+    digest: 04d01fadcf388959e44f20d82f28ffc1600be416ef2f64dbf46a4dd7d37668b9
     keywords:
     - vince
     - v8s
@@ -21,4 +21,4 @@ entries:
     urls:
     - https://vinceanalytics.github.io/charts/v8s-v0.0.3.tgz
     version: v0.0.3
-generated: "2023-06-01T17:10:14.981604+03:00"
+generated: "2023-06-02T14:15:20.31488+03:00"
