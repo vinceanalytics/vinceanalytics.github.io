@@ -2,8 +2,28 @@ apiVersion: v1
 entries:
   v8s:
   - apiVersion: v2
+    appVersion: v0.0.6
+    created: "2023-06-03T21:19:49.184026+03:00"
+    description: kubernetes controller for vince - The Cloud Native Web Analytics
+      Platform.
+    digest: be44ad802d4f5a7f8b8f33018ebaa143ec004842ed1214cb21a4f7605c052248
+    keywords:
+    - vince
+    - v8s
+    - web analytics
+    maintainers:
+    - email: geofreyernest@live.com
+      name: Geofrey Ernest
+    name: v8s
+    sources:
+    - https://github.com/vinceanalytics/vince
+    type: application
+    urls:
+    - https://vinceanalytics.github.io/charts/v8s-v0.0.6.tgz
+    version: v0.0.6
+  - apiVersion: v2
     appVersion: v0.0.3
-    created: "2023-06-02T14:15:20.315845+03:00"
+    created: "2023-06-03T21:19:49.183272+03:00"
     description: kubernetes controller for vince - The Cloud Native Web Analytics
       Platform.
     digest: 04d01fadcf388959e44f20d82f28ffc1600be416ef2f64dbf46a4dd7d37668b9
@@ -21,4 +41,4 @@ entries:
     urls:
     - https://vinceanalytics.github.io/charts/v8s-v0.0.3.tgz
     version: v0.0.3
-generated: "2023-06-02T14:15:20.31488+03:00"
+generated: "2023-06-03T21:19:49.182154+03:00"
