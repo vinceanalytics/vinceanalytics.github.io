@@ -1,0 +1,131 @@
+---
+# Source: v8s/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: v8s
+  namespace: default
+  labels:
+    app: vince
+    component: controller
+    chart: "v8s-v0.0.10"
+    release: "release-name"
+automountServiceAccountToken: true
+---
+# Source: v8s/templates/rbac.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: v8s-role
+  namespace: default
+  labels:
+    app: vince
+    component: controller
+    chart: "v8s-v0.0.10"
+    release: "release-name"
+    heritage: "Helm"
+rules:
+  - apiGroups:
+      - staples
+    resources:
+      - sites
+      - vinces
+    verbs:
+      - get
+      - list
+      - update
+      - watch
+---
+# Source: v8s/templates/rbac.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: v8s
+  namespace: default
+  labels:
+    app: vince
+    component: controller
+    chart: "v8s-v0.0.10"
+    release: "release-name"
+    heritage: "Helm"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: v8s-role
+subjects:
+- kind: ServiceAccount
+  name: v8s
+  namespace: default
+---
+# Source: v8s/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: v8s
+  labels:
+    app: vince
+    component: controller
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: http
+  selector:
+    app: vince
+    component: controller
+    release: "release-name"
+---
+# Source: v8s/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v8s
+  nospace: default
+  labels:
+    app: vince
+    component: controller
+    chart: "v8s-v0.0.10"
+    app.kubernetes.io/version: "v0.0.10"
+    release: "release-name"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vince
+      component: controller
+      release: "release-name"
+  template:
+    metadata:
+      labels:
+        app: vince
+        component: controller
+        release: "release-name"
+
+    spec:
+      serviceAccountName: v8s
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 999
+      containers:
+        - name: v8s
+          image: "ghcr.io/vinceanalytics/v8s:v0.0.10"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 9000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: http
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
