@@ -363,7 +363,7 @@ metadata:
   labels:
     app: vince
     component: controller
-    chart: "v8s-v0.0.14"
+    chart: "v8s-v0.0.15"
     release: "release-name"
 automountServiceAccountToken: true
 ---
@@ -376,7 +376,7 @@ metadata:
   labels:
     app: vince
     component: controller
-    chart: "v8s-v0.0.14"
+    chart: "v8s-v0.0.15"
     release: "release-name"
     heritage: "Helm"
 rules:
@@ -422,7 +422,7 @@ metadata:
   labels:
     app: vince
     component: controller
-    chart: "v8s-v0.0.14"
+    chart: "v8s-v0.0.15"
     release: "release-name"
     heritage: "Helm"
 roleRef:
@@ -461,8 +461,8 @@ metadata:
   labels:
     app: vince
     component: controller
-    chart: "v8s-v0.0.14"
-    app.kubernetes.io/version: "v0.0.14"
+    chart: "v8s-v0.0.15"
+    app.kubernetes.io/version: "v0.0.15"
     release: "release-name"
 spec:
   replicas: 1
@@ -485,7 +485,7 @@ spec:
         runAsUser: 999
       containers:
         - name: v8s
-          image: "ghcr.io/vinceanalytics/v8s:v0.0.14"
+          image: "ghcr.io/vinceanalytics/v8s:v0.0.15"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
