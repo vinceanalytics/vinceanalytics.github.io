@@ -4,14 +4,8 @@ layout: home
 hero:
   name: "vince"
   text: "The Cloud Native Web Analytics Platform"
-  tagline: Web Analytics for Everyone
-  actions:
-    - theme: brand
-      text: Getting Started
-      link: /guide/
-    - theme: alt
-      text: k8s
-      link: /k8s/
+  tagline: Get actionable insight from web traffic for your startup
+
 
 features:
   - title: Event tracking
