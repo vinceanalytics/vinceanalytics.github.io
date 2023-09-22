@@ -26,7 +26,12 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: "/logo.svg",
-
+    nav: [
+      {
+        text: "Blog",
+        link: "https://vinceanalytics.com/blog/"
+      }
+    ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vinceanalytics/vince' }
     ],
