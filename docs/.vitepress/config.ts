@@ -30,7 +30,22 @@ export default defineConfig({
       {
         text: "Blog",
         link: "https://vinceanalytics.com/blog/"
+      },
+      {
+        text: "Docs",
+        link: '/docs/'
       }
+    ],
+    sidebar: [
+      {
+        text: "SQL",
+        items: [
+          {
+            text: "add_site",
+            link: "/sql/add_site",
+          },
+        ],
+      },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vinceanalytics/vince' }
