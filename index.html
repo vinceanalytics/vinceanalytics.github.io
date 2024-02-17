@@ -36,41 +36,32 @@ Stats will be returned for the whole date range inclusive of the start and end d
 are often referred to as <em>dimensions</em> as well. Properties can be used for filtering and breaking down your stats to drill into
 more depth. Here&rsquo;s the full list of properties we collect automatically:<table><thead><tr><th>Property<th>Example<th>Description<tbody><tr><td><code>page</code><td>/blog/remove-google-analytics<td>Pathname of the page where the event is triggered. You can also use an asterisk to group multiple pages (<code>/blog*</code>)<tr><td><code>entry_page</code><td>/home<td>Page on which the visit session started (landing page).<tr><td><code>exit_page</code><td>/home<td>Page on which the visit session ended (last page viewed).<tr><td><code>source</code><td>Twitter<td>Visit source, populated from an url query parameter tag (<code>utm_source</code>, <code>source</code> or <code>ref</code>) or the <code>Referer</code> HTTP header.<tr><td><code>referrer</code><td>t.co/fzWTE9OTPt<td>Raw <code>Referer</code> header without <code>http://</code>, <code>http://</code> or <code>www.</code>.<tr><td><code>utm_medium</code><td>social<td>Raw value of the <code>utm_medium</code> query param on the entry page.<tr><td><code>utm_source</code><td>twitter<td>Raw value of the <code>utm_source</code> query param on the entry page.<tr><td><code>utm_campaign</code><td>profile<td>Raw value of the <code>utm_campaign</code> query param on the entry page.<tr><td><code>utm_content</code><td>banner<td>Raw value of the <code>utm_content</code> query param on the entry page.<tr><td><code>utm_term</code><td>keyword<td>Raw value of the <code>utm_term</code> query param on the entry page.<tr><td><code>device</code><td>Desktop<td>Device type. Possible values are <code>Desktop</code>, <code>Laptop</code>, <code>Tablet</code> and <code>Mobile</code>.<tr><td><code>browser</code><td>Chrome<td>Name of the browser vendor. Most popular ones are <code>Chrome</code>, <code>Safari</code> and <code>Firefox</code>.<tr><td><code>browser_version</code><td>88.0.4324.146<td>Version number of the browser used by the visitor.<tr><td>os<td>Mac<td>Name of the operating system. Most popular ones are <code>Mac</code>, <code>Windows</code>, <code>iOS</code> and <code>Android</code>. Linux distributions are reported separately.<tr><td><code>os_version</code><td>10.6<td>Version number of the operating system used by the visitor.<tr><td><code>country</code><td>United Kingdom<td>Country of the visitor country.<tr><td><code>region</code><td>England<td>Region the visitor region.<tr><td><code>city</code><td>London<td>City of the visitor city.</table><h3>Custom properties</h3><p>TBD<h2 id=filtering>Filtering</h2><p>Most endpoints support a <code>filters</code> query parameter to drill down into your data. You can filter by all properties described in the <a href=#properties>Properties table</a>, using the following operators:<table><thead><tr><th>Operator<th>Usage example<th>Explanation<tbody><tr><td><code>==</code><td><code>name==Signup</code><td>Simple equality - custom event &ldquo;Signup&rdquo;<tr><td><code>!=</code><td><code>country!=Tanzania</code><td>Simple inequality - country is not Tanzania<tr><td><code>~=</code><td><code>page~=^/blog/.*?</code><td>Regex - matches a regular expression<tr><td><code>!~</code><td><code>page!~^/blog/.*?</code><td>Regex - matches not a regular expression</table><h2 id=endpoints>Endpoints</h2><h3>GET /api/v1/stats/realtime/visitors</h3><p>This endpoint returns the number of current visitors on your site. A current visitor is defined as a visitor who triggered a pageview on your site
 in the last 5 minutes.<pre tabindex=0 style=color:#586e75;background-color:#eee8d5><code><span style=display:flex><span>+ curl -X GET <span style=color:#2aa198>&#39;http://localhost:8080/api/v1/stats/realtime/visitors?site_id=vinceanalytics.com&#39;</span>
-</span></span><span style=display:flex><span>{
-</span></span><span style=display:flex><span>  <span style=color:#2aa198>&#34;visitors&#34;</span>: <span style=color:#2aa198>&#34;5&#34;</span>
-</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#2aa198;font-weight:700>6</span>
 </span></span></code></pre><h4>Parameters</h4><hr><p><strong>site_id</strong> <span class=required>REQUIRED<span><p>Domain of your site on <code>vince</code>.<hr /><h3>GET /api/v1/stats/aggregate</h3><p>This endpoint aggregates metrics over a certain time period.It include <code>Unique Visitors</code><code>Pageviews</code>, <code>Bounce rate</code> and <code>Visit duration</code>. You can retrieve any number and combination of these metrics in one request.<pre tabindex=0 style=color:#586e75;background-color:#eee8d5><code><span style=display:flex><span>+ curl -X GET <span style=color:#2aa198>&#39;http://localhost:8080/api/v1/stats/aggregate?metrics=visitors%2Cvisits%2Cpageviews%2Cviews_per_visit%2Cbounce_rate%2Cvisit_duration%2Cevents&amp;site_id=vinceanalytics.com&#39;</span>
 </span></span><span style=display:flex><span>{
-</span></span><span style=display:flex><span>  <span style=color:#2aa198>&#34;results&#34;</span>:  [
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;visitors&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>5</span>
+</span></span><span style=display:flex><span>  <span style=color:#2aa198>&#34;results&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;bounce_rate&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: 0.8888888888888888
 </span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;visits&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>5</span>
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;events&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: <span style=color:#2aa198;font-weight:700>10</span>
 </span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;pageviews&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>10</span>
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;pageviews&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: <span style=color:#2aa198;font-weight:700>10</span>
 </span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;views_per_visit&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;views_per_visit&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: 1.1111111111111112
 </span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;bounce_rate&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  0.6
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;visit_duration&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: 0.0013333333333333333
 </span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;visit_duration&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  0.0058
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;visitors&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: <span style=color:#2aa198;font-weight:700>8</span>
 </span></span><span style=display:flex><span>    },
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;events&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>10</span>
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;visits&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;value&#34;</span>: <span style=color:#2aa198;font-weight:700>9</span>
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>  ]
+</span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}
 </span></span></code></pre><h4>Parameters</h4><hr /><p><strong>site_id</strong> <span class=required>REQUIRED<span><p>Domain of your site on <code>vince</code>.<hr /><p><strong>period</strong> <span class=optional>optional<span><p>See <a href=#time-periods>time periods</a>. If not specified, it will default to <code>30d</code>.<hr /><p><strong>metrics</strong> <span class=optional>optional<span><p>List of metrics to aggregate. Valid options are <code>visitors</code>, <code>visits</code>, <code>pageviews</code>, <code>views_per_visit</code>, <code>bounce_rate</code>, <code>visit_duration</code> and <code>events</code>. If not specified, it will default to <code>visitors</code>.<hr /><p><strong>filters</strong> <span class=optional>optional<span><p>See <a href=#filtering>filtering</a><hr /><h3>GET /api/v1/stats/timeseries</h3><p>This endpoint provides timeseries data over a certain time period.<pre tabindex=0 style=color:#586e75;background-color:#eee8d5><code><span style=display:flex><span>curl &#39;https://cloud.vinceanalytics.com/api/v1/stats/timeseries?site_id=$SITE_ID&amp;period=6mo&#39;
 </span></span><span style=display:flex><span>  -H &#34;Authorization: Bearer ${TOKEN}&#34;
@@ -79,38 +70,18 @@ specified, it will default to <code>visitors</code>.<hr /><p><strong>interval</s
 <code>month</code> for <code>6mo</code> and <code>12mo</code>, otherwise falls back to <code>date</code>.<h3>GET /api/v1/stats/breakdown</h3><p>This endpoint allows you to break down your stats by some property. If you are familiar with SQL family databases, this endpoint corresponds to
 running <code>GROUP BY</code> on a certain property in your stats, then ordering by the count.<p>Check out the <a href=#properties>properties</a> section for a reference of all the properties you can use in this query.<p>This endpoint can be used to fetch data for <code>Top sources</code>, <code>Top pages</code>, <code>Top countries</code> and similar reports.<pre tabindex=0 style=color:#586e75;background-color:#eee8d5><code><span style=display:flex><span>+ curl -X GET <span style=color:#2aa198>&#39;http://localhost:8080/api/v1/stats/breakdown?metrics=visitors%2Cbounce_rate&amp;property=browser&amp;site_id=vinceanalytics.com&#39;</span>
 </span></span><span style=display:flex><span>{
-</span></span><span style=display:flex><span>  <span style=color:#2aa198>&#34;results&#34;</span>:  [
-</span></span><span style=display:flex><span>    {
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;property&#34;</span>:  <span style=color:#2aa198>&#34;browser&#34;</span>,
-</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;groups&#34;</span>:  [
-</span></span><span style=display:flex><span>        {
-</span></span><span style=display:flex><span>          <span style=color:#2aa198>&#34;key&#34;</span>:  <span style=color:#2aa198>&#34;Facebook&#34;</span>,
-</span></span><span style=display:flex><span>          <span style=color:#2aa198>&#34;values&#34;</span>:  [
-</span></span><span style=display:flex><span>            {
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;visitors&#34;</span>,
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>4</span>
-</span></span><span style=display:flex><span>            },
-</span></span><span style=display:flex><span>            {
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;bounce_rate&#34;</span>,
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;value&#34;</span>:  0.75
-</span></span><span style=display:flex><span>            }
-</span></span><span style=display:flex><span>          ]
-</span></span><span style=display:flex><span>        },
-</span></span><span style=display:flex><span>        {
-</span></span><span style=display:flex><span>          <span style=color:#2aa198>&#34;key&#34;</span>:  <span style=color:#2aa198>&#34;Instagram App&#34;</span>,
-</span></span><span style=display:flex><span>          <span style=color:#2aa198>&#34;values&#34;</span>:  [
-</span></span><span style=display:flex><span>            {
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;visitors&#34;</span>,
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;value&#34;</span>:  <span style=color:#2aa198;font-weight:700>1</span>
-</span></span><span style=display:flex><span>            },
-</span></span><span style=display:flex><span>            {
-</span></span><span style=display:flex><span>              <span style=color:#2aa198>&#34;metric&#34;</span>:  <span style=color:#2aa198>&#34;bounce_rate&#34;</span>
-</span></span><span style=display:flex><span>            }
-</span></span><span style=display:flex><span>          ]
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>      ]
+</span></span><span style=display:flex><span>  <span style=color:#2aa198>&#34;results&#34;</span>: {
+</span></span><span style=display:flex><span>    <span style=color:#2aa198>&#34;browser&#34;</span>: {
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;Chrome Mobile&#34;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#2aa198>&#34;bounce_rate&#34;</span>: 0.6666666666666666,
+</span></span><span style=display:flex><span>        <span style=color:#2aa198>&#34;visitors&#34;</span>: <span style=color:#2aa198;font-weight:700>6</span>
+</span></span><span style=display:flex><span>      },
+</span></span><span style=display:flex><span>      <span style=color:#2aa198>&#34;Chrome Webview&#34;</span>: {
+</span></span><span style=display:flex><span>        <span style=color:#2aa198>&#34;bounce_rate&#34;</span>: 1,
+</span></span><span style=display:flex><span>        <span style=color:#2aa198>&#34;visitors&#34;</span>: <span style=color:#2aa198;font-weight:700>1</span>
+</span></span><span style=display:flex><span>      }
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>  ]
+</span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}
 </span></span></code></pre><h4>Parameters</h4><hr /><p><strong>site_id</strong> <span class=required>REQUIRED<span><p>Domain of your site on <code>vince</code>.<hr /><p><strong>property</strong> <span class=required>REQUIRED<span><p>Which property to break down the stats by. Valid options are listed in the <a href=#properties>properties</a> section above.<hr /><p><strong>period</strong> <span class=optional>optional<span><p>See <a href=#time-periods>time periods</a>. If not specified, it will default to <code>30d</code>.<hr /><p><strong>metrics</strong> <span class=optional>optional<span><p>Comma-separated list of metrics to show for each item in breakdown. Valid options are <code>visitors</code>, <code>pageviews</code>, <code>bounce_rate</code>, <code>visit_duration</code>, <code>visits</code> and <code>events</code>. If not
 specified, it will default to <code>visitors</code>.<hr /><p><strong>limit</strong> <span class=optional>optional<span><p>Limit the number of results. Maximum value is 1000. Defaults to 100. If you want to get more than 1000 results, you can make multiple requests and paginate the results by specifying the <code>page</code> parameter (e.g. make the same request with <code>page=1</code>, then <code>page=2</code>, etc)<hr /><p><strong>page</strong> <span class=optional>optional<span><p>Number of the page, used to paginate results. Importantly, the page numbers start from 1 not 0.<hr /><p><strong>filters</strong> <span class=optional>optional<span><p>See <a href=#filtering>filtering</a></div><hr><br><div><h1 id=events-api>Events API</h1></div><hr><br><div><h1 id=all-metrics>All Metrics</h1><blockquote><p><strong>CC-BY-S-4.0</strong> <em>This section was initially copied from Plausible Analytics docs</em></blockquote><h2 id=bounce-rate>Bounce Rate</h2><p>The percentage of visitors with a single page view. A visitor &ldquo;bounces&rdquo; away and leaves your site after only viewing a single page.<h2 id=current-visitors>Current Visitors</h2><p>The number of people currently on your site.It includes all visitors who have loaded a page in the last 5 minutes..<h2 id=time-on-page>Time on Page</h2><p>The average time people spend on a particular page on your site. This is calculated as the difference between the point when a person lands on a particular page and when they move on to the next page.<h2 id=total-pageviews>Total Pageviews</h2><p>The total number of times your pages were loaded by your visitors.<h2 id=unique-visitors>Unique Visitors</h2><p>The number of people who visited your site. We are privacy-friendly so we don&rsquo;t use cookies and other persistent identifiers. If a person visits from multiple devices or on multiple days, they are counted as separate visitors.<h2 id=views-per-visit>Views Per Visit</h2><p>Views per visit (also known as Pages per session) shows the average number of pageviews per visit. Repeated views of a single page are included too.<h2 id=visit-duration>Visit Duration</h2><p>The amount of time visitors spend on your site. It only shows people who visit more than one page. For those who visit one page only we default to 0 seconds. Average visit duration is the sum of all session lengths divided by the number of sessions, which includes the 0 second visits (bounces).<h2 id=total-visits>Total Visits</h2><p>A session (also known as a <code>visit</code>) is a set of actions that a user takes on your site. A visit is started when a visitor first lands on your page and ends when no action is taken on your site for 30 minutes.</div><hr><br></main><script>(()=>{document.body.classList.add("has-js");var t=document.getElementById("menutoggle"),n=document.getElementById("shadow"),s=document.getElementById("menu"),e=document.querySelector("nav");t.addEventListener("click",function(){s.scrollTop=0,e.classList.add("open")}),n.addEventListener("click",function(){e.classList.remove("open")})})()</script>
