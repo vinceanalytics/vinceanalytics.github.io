@@ -5,6 +5,7 @@ go 1.22.0
 require (
 	github.com/Depado/bfchroma/v2 v2.0.0
 	github.com/alecthomas/chroma/v2 v2.12.0
+	github.com/chanced/powerset v0.0.1
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/gorilla/websocket v1.5.1
 	github.com/gosimple/slug v1.14.0
