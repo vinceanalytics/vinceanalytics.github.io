@@ -248,7 +248,7 @@ func renderPost(text []byte) (o Post) {
 		Base: blackfriday.NewHTMLRenderer(blackfriday.HTMLRendererParameters{
 			Flags: blackfriday.CommonHTMLFlags,
 		}),
-		Style:      styles.Get("rose-pine-dawn"),
+		Style:      styles.Get("monokai"),
 		Autodetect: true,
 	}
 	r.Formatter = bhtml.New(r.ChromaOptions...)
