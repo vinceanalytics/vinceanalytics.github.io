@@ -105,7 +105,9 @@ curl  "http://localhost:8080/api/v1/stats/realtime/visitors?site_id=$SITE_ID" \
 ```
 #### RESPONSE
 ```json
-{"visitors":"7"}
+{
+  "visitors": "6"
+}
 ```
 
 
