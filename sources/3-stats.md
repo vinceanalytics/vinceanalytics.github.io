@@ -73,9 +73,6 @@ more depth. Here's the full list of properties we collect automatically:
 | `region`          | England                         | Region the visitor region.                                                                                                  |
 | `city`            | London                      | City of the visitor city.                                                                            |
 
-### Custom properties
-
-TBD
 
 ## Filtering
 
