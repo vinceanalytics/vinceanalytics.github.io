@@ -117,7 +117,7 @@ func renderPage(w io.Writer, id func() int, seen map[string]struct{}, text []byt
 		Base: blackfriday.NewHTMLRenderer(blackfriday.HTMLRendererParameters{
 			Flags: blackfriday.CommonHTMLFlags,
 		}),
-		Style:      styles.Get("monokai"),
+		Style:      styles.Get("monokailight"),
 		Autodetect: true,
 	}
 	r.Formatter = bhtml.New(r.ChromaOptions...)
