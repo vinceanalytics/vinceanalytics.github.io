@@ -126,31 +126,19 @@ Domain of your site on `vince`.
 This endpoint aggregates metrics over a certain time period.It include `Unique Visitors`` Pageviews`, `Bounce rate` and `Visit duration`. You can retrieve any number and combination of these metrics in one request.
 
 
+#### REQUEST
 ```bash
-+ curl -X GET 'http://localhost:8080/api/v1/stats/aggregate?metrics=visitors%2Cvisits%2Cpageviews%2Cviews_per_visit%2Cbounce_rate%2Cvisit_duration%2Cevents&site_id=vinceanalytics.com'
+curl "http://localhost:8080/api/v1/stats/aggregate?site_id=$SITE_ID&period=6mo&metrics=visitors,pageviews,bounce_rate,visit_duration" \
+  -H "Authorization: Bearer ${TOKEN}"
+```
+#### RESPONSE
+```json
 {
   "results": {
-    "bounce_rate": {
-      "value": 0.8888888888888888
-    },
-    "events": {
-      "value": 10
-    },
-    "pageviews": {
-      "value": 10
-    },
-    "views_per_visit": {
-      "value": 1.1111111111111112
-    },
-    "visit_duration": {
-      "value": 0.0013333333333333333
-    },
-    "visitors": {
-      "value": 8
-    },
-    "visits": {
-      "value": 9
-    }
+    "bounce_rate": 1,
+    "pageviews": 40,
+    "visit_duration": 0.00834375,
+    "visitors": 26
   }
 }
 ```
