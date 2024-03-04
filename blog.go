@@ -248,7 +248,7 @@ func renderPost(text []byte) (o Post) {
 		Base: blackfriday.NewHTMLRenderer(blackfriday.HTMLRendererParameters{
 			Flags: blackfriday.CommonHTMLFlags,
 		}),
-		Style:      styles.SolarizedLight,
+		Style:      styles.Get("rose-pine-dawn"),
 		Autodetect: true,
 	}
 	r.Formatter = bhtml.New(r.ChromaOptions...)
