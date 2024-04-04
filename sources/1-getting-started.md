@@ -22,7 +22,7 @@ docker pull ghcr.io/vinceanalytics/vince
 ### Starting server
 
 ```bash
-vince --data=vince-data --domains=example.com
+vince --data=vince-data --domains=example.com --nodeId=1
 ```
 
 This will start vince server listening on port `8080`
