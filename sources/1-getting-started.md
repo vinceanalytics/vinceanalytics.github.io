@@ -22,7 +22,7 @@ docker pull ghcr.io/vinceanalytics/vince
 ### Starting server
 
 ```bash
-vince --data=vince-data --domains=example.com
+vince --data=vince-data --domains=example.com --nodeId=1
 ```
 
 This will start vince server listening on port `8080`
@@ -30,7 +30,7 @@ This will start vince server listening on port `8080`
 ### Check if your server is up and running
 
 ```bash
-$ curl http://localhost:8080/api/v1/version
+$ curl http://localhost:8080/version
 {"version":"v0.0.67"}
 ```
 
