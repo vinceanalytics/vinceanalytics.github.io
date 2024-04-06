@@ -31,9 +31,7 @@ This will start vince server listening on port `8080`
 
 ```bash
 $ curl http://localhost:8080/api/v1/version
-{
-  "version": "v0.0.62"
-}
+{"version":"v0.0.67"}
 ```
 
 ## AddScript to your website
