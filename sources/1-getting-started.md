@@ -30,7 +30,7 @@ This will start vince server listening on port `8080`
 ### Check if your server is up and running
 
 ```bash
-$ curl http://localhost:8080/api/v1/version
+$ curl http://localhost:8080/version
 {
   "version": "v0.0.62"
 }
