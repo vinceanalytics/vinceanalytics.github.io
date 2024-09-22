@@ -1,0 +1,22 @@
+[
+    {
+        "section":"Deployment",
+        "pages":[
+            {
+                "title":"Deploy vince locally",
+                "source":"/guides/deployment/local.md",
+                "link":"/guide/deplyment/local"
+            },
+            {
+                "title":"Deploy vince with docker",
+                "source":"/guides/deployment/container.md",
+                "link":"/guide/deplyment/container"
+            },
+            {
+                "title":"Deploy vince in cloud",
+                "source":"/guides/deployment/cloud.md",
+                "link":"/guide/deplyment/cloud"
+            }
+        ]
+    }
+]

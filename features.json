@@ -1,0 +1,32 @@
+[
+    {
+        "link":  "/guide/deployment/local",
+        "title": "Self hosted",
+       "body":  "Designed from grounds up for painless self hosting."
+    },
+    {
+        "link":  "/guide/dashboard/filters",
+        "title": "Powerful filters",
+       "body":  "Easily filter youd data to extract valuable insights"
+    },
+    {
+        "link":  "/guide/dashboard/time-period",
+        "title": "Time Period Comparison",
+       "body":  "Compare data across different time periods for trend analysis."
+    },
+    {
+        "link":  "/guide/dashboard/session",
+        "title": "Session Analysis",
+       "body":  "Learn more about individual user journeys with in-depth session summaries."
+    },
+    {
+        "link":  "/guide/dashboard/custom-event",
+        "title": "Custom Event Tracking",
+       "body":  "Track and analyze custom events tailored to your website's needs."
+    },
+    {
+        "link":  "/guide/dashboard/404",
+        "title": "404 Page Tracking",
+       "body":  "Identify and address broken links with 404 page tracking."
+    }
+]
