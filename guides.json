@@ -4,7 +4,7 @@
         "pages":[
             {
                 "title":"Deploy vince locally",
-                "source":"/guides/deployment/local.md",
+                "source":"guides/deployment/local.md",
                 "link":"/guides/deployment/local"
             }
         ]
