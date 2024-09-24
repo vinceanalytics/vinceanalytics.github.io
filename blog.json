@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "title": "Why a license?",
+        "source": "/blog/why_license.md",
+        "link": "/blog/why-a-license",
+        "date":"2024-09-24",
+        "author": {
+            "name": "Geofrey Ernest"
+        }
+    }
+]
