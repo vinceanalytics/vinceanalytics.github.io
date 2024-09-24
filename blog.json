@@ -5,7 +5,8 @@
         "link": "/blog/why-a-license",
         "date":"2024-09-24",
         "author": {
-            "name": "Geofrey Ernest"
+            "name": "Geofrey Ernest",
+            "social":"https://github.com/gernest"
         }
     }
 ]
