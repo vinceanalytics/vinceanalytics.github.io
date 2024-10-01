@@ -8,5 +8,15 @@
                 "link":"/guides/deployment/local"
             }
         ]
+    },
+    {
+        "section":"Configuration",
+        "pages":[
+            {
+                "title":"CLI",
+                "source":"/guides/config/cli.md",
+                "link":"/guides/config/cli"
+            }
+        ]
     }
 ]
