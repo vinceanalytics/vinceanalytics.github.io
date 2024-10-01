@@ -16,6 +16,11 @@
                 "title":"CLI",
                 "source":"/guides/config/cli.md",
                 "link":"/guides/config/cli"
+            },
+            {
+                "title":"Configuring data storage",
+                "source":"/guides/config/data.md",
+                "link":"/guides/config/data"
             }
         ]
     }
