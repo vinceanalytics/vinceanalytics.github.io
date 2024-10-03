@@ -21,6 +21,11 @@
                 "title":"Configuring data storage",
                 "source":"/guides/config/data.md",
                 "link":"/guides/config/data"
+            },
+            {
+                "title":"Configuring automatic TLS",
+                "source":"/guides/config/acme.md",
+                "link":"/guides/config/auto-tls"
             }
         ]
     }
