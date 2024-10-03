@@ -33,3 +33,15 @@ go install github.com/vinceanalytics/vince@latest
 ```
 vince --version
 ```
+
+## Start vince
+
+```shell
+vince --adminName=acme \
+  --adminPassword=1234\
+  --adminEmail=trial@vinceanalytics.com \
+  --domains=vinceanalytics.com \
+  --license=trial_license_key
+```
+
+This command will start vince on `localhost:8080`.
