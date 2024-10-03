@@ -37,11 +37,11 @@ vince --version
 ## Start vince
 
 ```shell
-vince --adminName=acme \
+vince serve --adminName=acme \
   --adminPassword=1234\
   --adminEmail=trial@vinceanalytics.com \
   --domains=vinceanalytics.com \
-  --license=trial_license_key
+  --license=path/to/license_key
 ```
 
 This command will start vince on `localhost:8080`.
