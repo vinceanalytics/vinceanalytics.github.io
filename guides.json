@@ -28,5 +28,21 @@
                 "link":"/guides/config/auto-tls"
             }
         ]
+    },
+    {
+        "section":"API",
+        "pages":[
+            {
+                "title":"Generate API Key",
+                "source":"/guides/api/api_key.md",
+                "link":"/guides/api/api-key",
+                "files":[
+                    "api_key_form.png",
+                    "new_api_key.png",
+                    "settings.png",
+                    "success.png"
+                ]
+            }
+        ]
     }
 ]
