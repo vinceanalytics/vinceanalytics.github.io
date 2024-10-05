@@ -39,9 +39,7 @@ vince --version
 ```shell
 vince serve --adminName=acme \
   --adminPassword=1234\
-  --adminEmail=trial@vinceanalytics.com \
-  --domains=vinceanalytics.com \
-  --license=path/to/license_key
+  --adminEmail=acme@example.com 
 ```
 
-This command will start vince on `localhost:8080`.
+This command will start vince on `localhost:8080`. You can automatically add sites on startup with `--domains` flag.
