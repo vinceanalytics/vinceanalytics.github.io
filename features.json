@@ -1,1 +1,7 @@
-[]
+[
+    {
+        "link": "/guides/config/auto-tls",
+        "title": "Automatic TLS",
+        "body": "Serve HTTPS autpmatically with let's encrypt."
+    }
+]
