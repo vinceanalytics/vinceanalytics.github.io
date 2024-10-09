@@ -33,6 +33,16 @@
         "section":"API",
         "pages":[
             {
+                "title":"Concepts",
+                "source":"/guides/api/concepts.md",
+                "link":"/guides/api/concepts"
+            },
+            {
+                "title":"All metrics and their definitions",
+                "source":"/guides/api/metrics_and_definitions.md",
+                "link":"/guides/api/metrics-and-definitions"
+            },
+            {
                 "title":"Generate API Key",
                 "source":"/guides/api/api_key.md",
                 "link":"/guides/api/api-key",
@@ -42,11 +52,6 @@
                     "settings.png",
                     "success.png"
                 ]
-            },
-            {
-                "title":"All metrics and their definitions",
-                "source":"/guides/api/metrics_and_definitions.md",
-                "link":"/guides/api/metrics-and-definitions"
             }
         ]
     }
