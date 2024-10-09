@@ -3,7 +3,7 @@ settings in Vince and grab the value of the `domain` field.
 
 ### Metrics
 
-You can specify a `metrics` option in the query, to choose the metrics for each instance returned. See here for a full overview of [metrics and their definitions](/metrics-definitions). The metrics currently supported in Stats API are:
+You can specify a `metrics` option in the query, to choose the metrics for each instance returned. See here for a full overview of [metrics and their definitions](/guides/api/metrics-definitions). The metrics currently supported in Stats API are:
 
 | Metric            | Description                                                                                                                                               |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
