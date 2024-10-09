@@ -42,6 +42,11 @@
                     "settings.png",
                     "success.png"
                 ]
+            },
+            {
+                "title":"All metrics and their definitions",
+                "source":"/guides/api/metrics_and_definitions.md",
+                "link":"/guides/api/metrics-and-definitions"
             }
         ]
     }
