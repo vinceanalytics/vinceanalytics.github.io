@@ -62,6 +62,11 @@
                 "title":"Aggregate",
                 "source":"/guides/api/aggregate.md",
                 "link":"/guides/api/aggregate"
+            },
+            {
+                "title":"Timeseries",
+                "source":"/guides/api/timeseries.md",
+                "link":"/guides/api/timeseries"
             }
         ]
     }
