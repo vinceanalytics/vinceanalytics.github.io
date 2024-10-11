@@ -57,6 +57,11 @@
                 "title":"Current visitors",
                 "source":"/guides/api/current_visitors.md",
                 "link":"/guides/api/current-visitors"
+            },
+            {
+                "title":"Aggregate",
+                "source":"/guides/api/aggregate.md",
+                "link":"/guides/api/aggregate"
             }
         ]
     }

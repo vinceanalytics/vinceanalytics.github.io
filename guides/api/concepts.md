@@ -1,7 +1,7 @@
 Each request requires a `site_id` parameter which is the domain of your site as configured in Vince. If you're unsure, navigate to your site
 settings in Vince and grab the value of the `domain` field.
 
-### Metrics
+### Metrics {#metrics}
 
 You can specify a `metrics` option in the query, to choose the metrics for each instance returned. See here for a full overview of [metrics and their definitions](/guides/api/metrics-definitions). The metrics currently supported in Stats API are:
 
@@ -17,7 +17,7 @@ You can specify a `metrics` option in the query, to choose the metrics for each 
 | `conversion_rate` | The percentage of visitors who completed the goal. Requires an `event:goal` filter or `event:goal` property in the breakdown endpoint                     |
 | `time_on_page`    | The average time users spend on viewing a single page. Requires an `event:page` filter or `event:page` property in the breakdown endpoint.                |
 
-### Time periods
+### Time periods {#time-periods}
 
 The options are identical for each endpoint that supports configurable time periods. Each period is relative to a `date` parameter. The date should follow the standard ISO-8601 format. When not specified, the `date` field defaults to `today(site.timezone)`.
 All time calculations on our backend are done in the time zone that the site is configured in.
@@ -65,7 +65,7 @@ more depth. Here's the full list of properties we collect automatically:
 In addition to properties that are collected automatically, you can also query for [custom properties](/custom-props/introduction).
 To filter or break down by a custom property, use the key `event:props:<custom_prop_name>`. [See example](#breakdown-custom-event-by-custom-properties) for how to use it.
 
-### Filtering
+### Filtering {#filtering}
 
 Most endpoints support a `filters` query parameter to drill down into your data. You can filter by all properties described in the [Properties table](#properties), using the following operators:
 
