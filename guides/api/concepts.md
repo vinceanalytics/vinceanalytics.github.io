@@ -31,7 +31,7 @@ All time calculations on our backend are done in the time zone that the site is 
 When using a custom range, the `date` parameter expects two ISO-8601 formatted dates joined with a comma as follows `?period=custom&date=2021-01-01,2021-01-31`.
 Stats will be returned for the whole date range inclusive of the start and end dates.
 
-### Properties
+### Properties {#properties}
 
 Each pageview and custom event in our database has some predefined _properties_ associated with it. In other analytics tools, these
 are often referred to as _dimensions_ as well. Properties can be used for filtering and breaking down your stats to drill into
