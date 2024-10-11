@@ -52,6 +52,11 @@
                     "settings.png",
                     "success.png"
                 ]
+            },
+            {
+                "title":"Current visitors",
+                "source":"/guides/api/current_visitors.md",
+                "link":"/guides/api/current-visitors"
             }
         ]
     }
