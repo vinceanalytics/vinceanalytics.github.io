@@ -6,6 +6,11 @@
                 "title":"Deploy vince locally",
                 "source":"/guides/deployment/local.md",
                 "link":"/guides/deployment/local"
+            },
+            {
+                "title":"Deploy vince with docker container",
+                "source":"/guides/deployment/docker.md",
+                "link":"/guides/deployment/docker"
             }
         ]
     },
