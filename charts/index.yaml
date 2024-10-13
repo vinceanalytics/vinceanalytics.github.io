@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  vince:
+  - apiVersion: v2
+    appVersion: v1.3.1
+    created: "2024-10-13T10:50:18.714315+03:00"
+    description: Cloud-Native web analytics for everyone
+    digest: 6639c6b821fc160cca9b815c31855a500e1236c5d2bc29885cae7756d47830f7
+    name: vince
+    type: application
+    urls:
+    - https://vinceanalytics.com/charts/vince-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-10-13T10:50:18.713766+03:00"
