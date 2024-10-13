@@ -11,6 +11,16 @@
                 "title":"Deploy vince with docker container",
                 "source":"/guides/deployment/docker.md",
                 "link":"/guides/deployment/docker"
+            },
+            {
+                "title":"Installing vince on kubernetes with helm",
+                "source":"/guides/k8s/install.md",
+                "link":"/guides/deployment/k8s-helm-install"
+            },
+            {
+                "title":"Uninstalling vince on kubernetes with helm",
+                "source":"/guides/k8s/uninstall.md",
+                "link":"/guides/deployment/k8s-helm-uninstall"
             }
         ]
     },
