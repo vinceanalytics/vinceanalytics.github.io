@@ -32,7 +32,7 @@ jobs:
         with:
           go-version: "1.22.5"
       - name: Install sitetools
-        run: go install github.com/vinceanalytics/sitetools@77ada8fd7cd99a38b89962832c193a463433bf2b
+        run: go install github.com/vinceanalytics/sitetools@0b03d7d4d0f10b985c29c22a6956a35793ee680d
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
