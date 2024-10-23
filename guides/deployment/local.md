@@ -17,11 +17,7 @@ curl -fsSL https://vinceanalytics.com/install.sh | bash
 docker pull ghcr.io/vinceanalytics/vince
 ```
 
-### From source
 
-```
-go install github.com/vinceanalytics/vince@latest
-```
 
 ### Download 
 
@@ -36,10 +32,18 @@ vince --version
 
 ## Start vince
 
-```shell
-vince serve --adminName=acme \
-  --adminPassword=1234\
-  --adminEmail=acme@example.com 
+
+*create admin*
+```
+❯ vince admin --name acme --password 1234
 ```
 
-This command will start vince on `localhost:8080`. You can automatically add sites on startup with `--domains` flag.
+*start server*
+```
+❯ vince serve                            
+2024/10/23 15:32:08 [JOB 1] WAL file vince-data/pebble/000002.log with log number 000002 stopped reading at offset: 124; replayed 1 keys in 1 batches
+2024/10/23 15:32:08 INFO starting event processing loop
+2024/10/23 15:32:08 INFO starting server addr=:8080
+```
+
+See [Cli](/guides/config/cli) guide for full commandline options

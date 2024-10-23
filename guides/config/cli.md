@@ -1,4 +1,5 @@
 ```shell
+❯ vince 
 NAME:
    vince - The cloud native web analytics server
 
@@ -6,26 +7,75 @@ USAGE:
    vince [global options] [command [command options]] [arguments...]
 
 VERSION:
-   v1.1.0
+   v1.5.2
 
 DESCRIPTION:
    Self hosted web analytics server that respects user privacy
 
 COMMANDS:
+   serve    Starts vince web server
+   admin    Creates admin account
    help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
+   --help, -h     show help (default: false)
+   --version, -v  print the version (default: false)
+```
+
+
+## admin
+
+Creates admin account that is used to access the vince instance.
+
+*Example*
+```
+❯ vince admin --name acme --password 1234
+```
+
+> Only one admin is allowed pervince instance. Changing password is achieved by running the admin command with a different password.
+
+```shell
+❯ vince admin -h
+NAME:
+   vince admin - Creates admin account
+
+USAGE:
+   vince admin [command [command options]] 
+
+OPTIONS:
+   --data value      directory to store data (default: "vince-data") [$VINCE_DATA]
+   --name value      admin email address [$VINCE_ADMIN_NAME]
+   --password value  admin password [$VINCE_ADMIN_PASSWORD]
+   --help, -h        show help (default: false)
+```
+
+## serve
+
+Starts vince instance server
+
+*Example*
+```
+❯ vince serve                            
+```
+
+> Make sure you start with same --data path as the one you created admin account
+
+```
+❯ vince serve -h
+NAME:
+   vince serve - Starts vince web server
+
+USAGE:
+   vince serve [command [command options]] 
+
+OPTIONS:
    --listen value                       host:port to dind the servser (default: ":8080") [$VINCE_LISTEN]
-   --data value                         directory to store data [$VINCE_DATA]
+   --data value                         directory to store data (default: "vince-data") [$VINCE_DATA]
    --autoTLS                            enables automatic tls (default: false) [$VINCE_AUTO_TLS]
    --acmeEmail value                    email address for atomatic tls [$VINCE_ACME_EMAIL]
    --acmeDomain value                   domain for atomatic tls [$VINCE_ACME_DOMAIN]
-   --adminName value                    admin user name [$VINCE_ADMIN_NAME]
-   --adminEmail value                   admin email address [$VINCE_ADMIN_EMAIL]
-   --adminPassword value                admin password [$VINCE_ADMIN_PASSWORD]
    --url value                          url resolving to this vince instance (default: "http://localhost:8080") [$VINCE_URL]
    --domains value [ --domains value ]  list of domains to create on startup [$VINCE_DOMAINS]
    --profile                            registrer http profiles on /debug/ path (default: false) [$VINCE_PROFILE]
    --help, -h                           show help (default: false)
-   --version, -v                        print the version (default: false)
 ```
