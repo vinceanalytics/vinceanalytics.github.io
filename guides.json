@@ -11,6 +11,17 @@
         ]
     },
     {
+        "section":"Goals",
+        "pages":[
+            {
+                "title":"Introduction to goal conversions and behavior analytics",
+                "source":"/guides/goals/goals_conversions.md",
+                "link":"/guides/goals/intro",
+                "files":["goal_display.png"]
+            }
+        ]
+    },
+    {
         "section":"Deployment",
         "pages":[
             {
