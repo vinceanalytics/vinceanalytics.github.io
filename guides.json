@@ -1,5 +1,16 @@
 [
     {
+        "section":"General",
+        "pages":[
+            {
+                "title":"Share your stats with a private and secure link",
+                "source":"/guides/general/shared_links.md",
+                "link":"/guides/general/shared-links",
+                "files":["shared_links.png","shared_links_create.png","shared_links_delete.png"]
+            }
+        ]
+    },
+    {
         "section":"Deployment",
         "pages":[
             {
