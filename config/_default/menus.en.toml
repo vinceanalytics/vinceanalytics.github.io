@@ -1,0 +1,49 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[main]]
+name = "Guides"
+weight = 2
+
+[[main]]
+parent = "Guides"
+name = "Deployment"
+url = "/tags/deployment"
+
+[[main]]
+parent = "Guides"
+name = "Config"
+url = "/tags/config"
+
+[[main]]
+parent = "Guides"
+name = "API"
+url = "/tags/api"
+
+[[main]]
+parent = "Guides"
+name = "Goals"
+url = "/tags/goals"
+
+[[main]]
+name = "Blog"
+url = "/blog"
+weight = 3
+
+
+# footer menu
+[[footer]]
+name = "About"
+url = "/about"
+weight = 1
+
+
+[[footer]]
+name = "Privacy Policy"
+url = "/privacy-policy"
+weight = 3
