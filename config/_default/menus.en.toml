@@ -31,6 +31,11 @@ name = "Goals"
 url = "/tags/goals"
 
 [[main]]
+parent = "Guides"
+name = "Website"
+url = "/tags/sites"
+
+[[main]]
 name = "Blog"
 url = "/blog"
 weight = 3

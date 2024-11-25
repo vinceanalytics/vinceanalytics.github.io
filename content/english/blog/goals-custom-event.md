@@ -17,7 +17,7 @@ Please change the file name in the `src` attribute of your vince snippet from `s
 <script defer data-domain="yourdomain.com" src="http://localhost:8080/js/script.tagged-events.js"></script>
 ```
 
-> If you're using outbound link clicks, file downloads or any of our other script extensions, you can [combine them](/website-script-extensions#you-can-combine-extensions-according-to-your-needs) by changing the `src` attribute in the snippet. If you want to track custom events and outbound link clicks simultaneously, change the script name to `script.tagged-events.outbound-links.js`.
+> If you're using outbound link clicks, file downloads or any of our other script extensions, you can [combine them](/blog/website-script-extensions#you-can-combine-extensions-according-to-your-needs) by changing the `src` attribute in the snippet. If you want to track custom events and outbound link clicks simultaneously, change the script name to `script.tagged-events.outbound-links.js`.
 
 ## 2. Add a CSS class name to the element you want to track on your site
 

@@ -32,13 +32,13 @@ As usual, you need to place your Vince Analytics tracking script code into the H
 Do this for all the websites where you'd like to enable file downloads tracking. This is the only tracking script you need. You don't need to keep the old script. Your stats will keep tracking without interruption, and you won't lose any of your old data.
 
 
-> Do you want to use the file downloads feature alongside the [outbound link clicks tracking](/goals-outbound-links)? You can combine any of our extensions by changing the `src` attribute in the snippet. In this case, change it to `script.file-downloads.outbound-links.js`.
+> Do you want to use the file downloads feature alongside the [outbound link clicks tracking](/blog/goals-outbound-links)? You can combine any of our extensions by changing the `src` attribute in the snippet. In this case, change it to `script.file-downloads.outbound-links.js`.
 
 ## Step 2: Create a custom event goal in your Vince Analytics account
 
 File download clicks won’t show up automatically. You’ll have to configure the goal for them to show up on your dashboard.
 
-To configure a goal, go to [your website’s settings](/website-settings) in your Vince Analytics account and visit the "**Goals**" section. You should see a prompt to add a goal.
+To configure a goal, go to [your website’s settings](/blog/website-settings) in your Vince Analytics account and visit the "**Goals**" section. You should see a prompt to add a goal.
 
 {{< image src="images/guides/goal_conversions.png" >}}
 
