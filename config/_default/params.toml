@@ -44,7 +44,7 @@ preloader = "" # use jpg, png, svg or gif format.
 [navigation_button]
 enable = true
 label = "Live Demo"
-link = "http://localhost:8080/v1/share/vinceanalytics.com?auth=KbtSbNgFghk1olxa&demo=true"
+link = "#"
 
 # search
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
