@@ -18,3 +18,5 @@ social:
 ---
 
 A Senior Software Engineer dreaming about working in Silicon Valley. Interested in databases and all things Data.
+
+If you find my work interesting, you can hire me. I am currently looking for a full time remote software engineering role.
