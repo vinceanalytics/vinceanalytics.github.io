@@ -14,7 +14,7 @@ We use [Pebble Key Value Store](https://github.com/cockroachdb/pebble) and  roar
 This challenge has very similar use case like vince, we have two columns, one for weather stations (with low cardinality) and another for temperature (with high cardinality).
 
 {{< notice "info" >}}
-[Pebble](https://github.com/cockroachdb/pebble) is the  underlying key value storage for [CocroachDB](https://github.com/cockroachdb/cockroach) and has been used in production since 2020.
+[Pebble](https://github.com/cockroachdb/pebble) is the  underlying key value storage for [cockroachdb](https://github.com/cockroachdb/cockroach) and has been used in production since 2020.
 {{< /notice >}}
 
 
