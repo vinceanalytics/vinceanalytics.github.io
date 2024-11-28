@@ -1,6 +1,7 @@
 ---
 title: Pebble and The One Billion Row Challenge with Roaring Bitmaps
 author: "Geofrey Ernest"
+date: "2024-11-28T21:12:46.48958Z"
 categories: ["Blog"]
 tags: ["pebble","roaring-bitmaps","storage"]
 ---
@@ -80,14 +81,22 @@ Index result size on disk
 
 Interesting result, we were able to reduce `13GB` to only `3.1GB`. 
 
-You can skip the following section ang go directly to [Aggregate Results](#aggregate-results) if you are not interested in techinal details of roaring bitmap indexes, it is a very long read.
 
-### Roaring Bitmap Index
+### Compressed Roaring Bitmap Index
 
 This is the **_only_** index used by vince, and has its roots in Pilosa  which was a global bitmap index. I extracted the [roaring bitmap](https://github.com/gernest/roaring) implementation from pilosa and spent the **last 2 years** researching on how to apply their indexing strategy for web analytics events. 
 
+Pilosa went out of business and their bitmap related posts are no longer acceccible. I will try in the future to write more about roaring bitmap indexes in other blog posts. 
+
+You can read more about,
+
+- [Equality based encoded bitmaps](https://featurebasedb.github.io/FB-community-help/docs/concepts/concept-bitmaps-equality-encoded/) which we use for string columns
+- [Bit sliced encoded bitmaps](https://featurebasedb.github.io/FB-community-help/docs/concepts/concept-bitmaps-bit-slice/) which we use for high cardinality columns like `temperature measurements`.
+
 
 ## Aggregate Results
+
+All query commands works with already indexed data created in steps before in the `index` directory.
 
 ### All
 
@@ -120,3 +129,12 @@ robin query index Abha  2.94s user 1.82s system 409% cpu 1.163 total
 {{< notice "note" >}}
 vince does not have global scan filters. The index is designed for extremely fast filters by specific column value, in our case here we aggregated across a billion rows for only `Abha` station under 1 second without any optimizations.
 {{< /notice >}}
+
+
+## Conclusion
+
+`pebble` is a rock solid key value store that is very efficient and works very well with write heavy workload. Combining `pebble` and Roaring bitmaps is what makes `vince` posibble.
+
+I am looking forward to the next release of `pebble`, they have introduced columnar format for sst tables which will benefit `vince` , as data is stored and processed in columns.
+
+To members of cockroachdb team who read this, **THANK YOU** .
