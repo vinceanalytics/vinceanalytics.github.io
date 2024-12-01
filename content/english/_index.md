@@ -18,7 +18,7 @@ features:
       - "Automatic TLS"
       - "Custom events tracking"
       - "Goal conversions"
-      - "File Downaloads tracking"
+      - "File Downloads tracking"
       - "Outbound Links tracking"
       - "404 Page tracking"
       - "Unlimited websites"
