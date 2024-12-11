@@ -12,4 +12,4 @@ We created vince because existing solutions didn't cater to our needs, we needed
 
 We offer very similar features like Plausible Analytics in  a single binary that is highly optimized for efficiency to ensure you get the most out of your limited budget.
 
-[Geofrey Ernest](https://github.com/gernest) , spent three years researching on how to apply roaring bitmaps index on web analytics events. The reason vince is efficient and fast can be attributed to its compact storage format.
+[Geofrey Ernest](https://www.vinceanalytics.com/authors/geofrey-ernest/) , spent three years researching on how to apply roaring bitmaps index on web analytics events. The reason vince is efficient and fast can be attributed to its compact storage format.
