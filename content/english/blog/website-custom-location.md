@@ -2,6 +2,7 @@
 title: Specify a custom location to aggregate pages that contain id
 categories: ["Guides"]
 tags: ["sites"]
+date: "2024-12-11"
 ---
 
 <!--more-->

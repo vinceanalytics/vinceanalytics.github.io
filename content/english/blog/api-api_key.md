@@ -3,6 +3,7 @@ title: Generate API Key
 author: "Geofrey Ernest"
 categories: ["Guides"]
 tags: ["api"]
+date: "2024-12-11"
 ---
 
 <!--more-->

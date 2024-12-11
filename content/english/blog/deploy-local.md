@@ -4,6 +4,7 @@ categories: ["Guides"]
 author: "Geofrey Ernest"
 tags: ["deployment"]
 draft: false
+date: "2024-12-11"
 ---
 
 Vince ships a single executable without any dependencies.

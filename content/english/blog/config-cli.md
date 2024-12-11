@@ -3,6 +3,7 @@ title: CLI
 author: "Geofrey Ernest"
 categories: ["Guides"]
 tags: ["config"]
+date: "2024-12-11"
 ---
 
 <!--more-->

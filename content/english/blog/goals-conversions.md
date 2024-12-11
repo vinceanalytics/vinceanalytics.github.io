@@ -3,6 +3,7 @@ title: Introduction to goal conversions and behavior analytics
 author: "Geofrey Ernest"
 categories: ["Guides"]
 tags: ["goals"]
+date: "2024-12-11"
 ---
 
 <!--more-->

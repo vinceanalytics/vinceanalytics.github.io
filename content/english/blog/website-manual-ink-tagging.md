@@ -2,6 +2,7 @@
 title: Paid campaigns, UTM tags and conversion attribution
 categories: ["Guides"]
 tags: ["sites"]
+date: "2024-12-11"
 ---
 
 <!--more-->

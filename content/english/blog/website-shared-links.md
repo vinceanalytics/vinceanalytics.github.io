@@ -2,6 +2,7 @@
 title: Share your stats with a private and secure link
 categories: ["Guides"]
 tags: ["sites"]
+date: "2024-12-11"
 ---
 
 <!--more-->

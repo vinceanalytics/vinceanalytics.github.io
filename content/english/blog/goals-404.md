@@ -3,6 +3,7 @@ title: 404 error pages tracking
 author: "Geofrey Ernest"
 categories: ["Guides"]
 tags: ["goals"]
+date: "2024-12-11"
 ---
 
 

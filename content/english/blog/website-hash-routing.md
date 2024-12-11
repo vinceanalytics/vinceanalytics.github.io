@@ -3,6 +3,7 @@ title: Hash-based routing
 category: Guides
 categories: ["Guides"]
 tags: ["sites"]
+date: "2024-12-11"
 ---
 
 <!--more-->
