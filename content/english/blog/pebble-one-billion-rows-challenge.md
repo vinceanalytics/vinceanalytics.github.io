@@ -21,7 +21,7 @@ This challenge has very similar use case like vince, we have two columns, one fo
 Full source code of the  implementation has been released as [robin](https://github.com/gernest/robin). And can be installed locally with,
 
 ```shell
-go install github.com/gernest/roabin@latest
+go install github.com/gernest/robin@latest
 ```
 
 

@@ -18,7 +18,7 @@ features:
       - "Automatic TLS"
       - "Custom events tracking"
       - "Goal conversions"
-      - "File Downaloads tracking"
+      - "File Downloads tracking"
       - "Outbound Links tracking"
       - "404 Page tracking"
       - "Unlimited websites"
@@ -32,10 +32,10 @@ features:
 
   - title: "Secret sauce of vince"
     image: "/images/service-2.svg"
-    content: "We designed custom storage for web analytics events based on Compressed Roaring Bitmaps using columnar storage to achieve extreme query speeds and efficint data storage."
+    content: "We designed custom storage for web analytics events based on Compressed Roaring Bitmaps using columnar storage to achieve extreme query speeds and efficient data storage."
     bulletpoints:
       - "Lighweight < 1KB script"
-      - "Eazy to deploy and manage: Only a single vince binary is needed"
+      - "Easy to deploy and manage: Only a single vince binary is needed"
     button:
       enable: true
       label: "Give vince a try"
