@@ -28,7 +28,7 @@ features:
     button:
       enable: true
       label: "See live demo Dashboard"
-      link: "#"
+      link: "https://demo.vinceanalytics.com/v1/share/vinceanalytics.com?auth=Ls9tV4pzqOn7BJ7-&demo=true"
 
   - title: "Secret sauce of vince"
     image: "/images/service-2.svg"
