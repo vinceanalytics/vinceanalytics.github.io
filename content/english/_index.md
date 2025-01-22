@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Self hosted web analytics for everyone."
-  content: "vince is is a cost effective , self hosted , privacy friendly alternative to Google Analytics. Be GDPR, CCPA and PECR compliant, respect your user's privacy, forget about cookie notice, save money and other engineering resources while gaining actionable insights from your websites."
+  content: "vince is a cost effective, self-hosted, privacy friendly alternative to Google Analytics. Be GDPR, CCPA and PECR compliant, respect your users' privacy, forget about cookie notices, save money and other engineering resources while gaining actionable insights from your websites."
   image: "/images/banner.png"
   button:
     enable: true
@@ -34,7 +34,7 @@ features:
     image: "/images/service-2.svg"
     content: "We designed custom storage for web analytics events based on Compressed Roaring Bitmaps using columnar storage to achieve extreme query speeds and efficient data storage."
     bulletpoints:
-      - "Lighweight < 1KB script"
+      - "Lightweight < 1KB script"
       - "Easy to deploy and manage: Only a single vince binary is needed"
     button:
       enable: true
