@@ -62,7 +62,7 @@ show_categories = true
 [announcement]
 enable = true
 expire_days = 7
-content = "vince [**v.11.5**](https://github.com/vinceanalytics/vince/releases/tag/v1.11.5) has been released."
+content = "vince [**v.11.6**](https://github.com/vinceanalytics/vince/releases/tag/v1.11.6) has been released."
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
